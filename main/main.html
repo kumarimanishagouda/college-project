@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Organizing System</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>College Festivity Hub</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2 id="hero-text">Unleash the Festive Spirit – Plan, Participate, Celebrate!</h2>
+        <p>Join the most exciting college events and make memories.</p>
+        <button class="cta">Explore Events</button>
+        <button class="cta secondary">Host an Event</button>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">🎭 <h3>Plan Events Effortlessly</h3></div>
+        <div class="feature-card">📅 <h3>Live Event Calendar</h3></div>
+        <div class="feature-card">🎥 <h3>Photo & Video Gallery</h3></div>
+    </section>
+
+    <section class="countdown">
+        <h3>Next Big Event Starts In:</h3>
+        <div id="timer">00:00:00</div>
+    </section>
+
+    <section class="testimonials">
+        <h3>What Students Say</h3>
+        <div class="testimonial">“Best college event experience ever!” - Alex</div>
+        <div class="testimonial">“Super easy to organize events!” - Priya</div>
+    </section>
+
+    <script>
+        // GSAP Animations
+        gsap.from("#hero-text", { duration: 1.5, opacity: 0, y: -50, ease: "bounce" });
+        gsap.from(".cta", { duration: 1, opacity: 0, y: 30, stagger: 0.2 });
+        gsap.from(".feature-card", { duration: 1, opacity: 0, x: -50, stagger: 0.3 });
+    </script>
+</body>
+</html>

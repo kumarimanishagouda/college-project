@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+.container {
+    display: flex;
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.illustration {
+    width: 50%;
+    background: #81d4fa; /*right side color*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.illustration img {
+    width: 100%;
+}
+.login-form {
+    width: 50%;
+    padding: 40px;
+    background: #2d93e6;/*left side color*/
+    color: white;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+}
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0462af; /*button color*/        
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-btn:hover {
+    background: #01579b;
+}
+.links {
+    margin-top: 10px;
+    text-align: center;
+}
+.links a {
+    color: #004d40;
+    text-decoration: none;
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  /* Apply to container */
+  .container {
+    display: flex;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Apply to form section */
+  .form-box {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  /* Input Focus Animation */
+  input[type="text"], input[type="password"] {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border: 2px solid #007BFF;
+    box-shadow: 0 0 8px rgba(0,123,255,0.6);
+  }
+  
+  /* Button Hover Animation */
+  button {
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  h2{
+    text-align: center;
+  }

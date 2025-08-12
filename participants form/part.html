@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Participant Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .event-banner {
+            width: 50%;
+            max-width: 500px;
+            height: 70%;
+            border-radius: 8px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 400px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .event-banner, .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="Register form.webp" alt="College Event Banner" class="event-banner">
+        <div class="container">
+            <h2>Event Registration</h2>
+            <form id="participantForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="stream">Stream:</label>
+                <select id="stream" required>
+                    <option value="">Select Stream</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BBA">BBA</option>
+                </select>
+                
+                <label for="year">Year:</label>
+                <select id="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                </select>
+                
+                <button type="button" onclick="registerParticipant()">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function registerParticipant() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let stream = document.getElementById("stream").value;
+            let year = document.getElementById("year").value;
+
+            if (name && email && stream && year) {
+                alert(`Registration Successful!\nName: ${name}\nEmail: ${email}\nStream: ${stream}\nYear: ${year}`);
+                document.getElementById("participantForm").reset();
+            } else {
+                alert("Please fill all the fields.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist",sans-serif;
+}
+html{
+    font-size:62.5%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins",sans-serif;
+}
+.container{
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+}
+.section-navbar{
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.section-navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 0;
+}
+.section-navbar .navbar ul{
+    display: flex;
+    gap: 1.8rem;
+    font-weight: 400; 
+    & li a{
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 1.6rem;
+    position: relative;
+    font-weight: 600;
+    
+    
+    &::after{
+        content:" ";
+        position: absolute;
+        bottom: -0.3rem;
+        left:0;
+        width:50%;
+        border-bottom:0.2rem solid var(--main-color);
+        transition:all 0.3s linear;
+    }
+    } 
+    & li a:hover:after{
+        width:100%;
+    } 
+
+}
+li{
+  list-style-type: none;   
+}
+ 
+p,a,li{
+    font-family: "Urbanist",sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.08;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 2.5rem;
+}
+
+:root{
+    --main-color:rgb(33, 33, 174);
+    --supporting-color:rgb(237, 226, 226);
+    --font-color:rgb(38, 25, 25);
+    --bg-color:rgb(118, 108, 108);
+    --heading-color:rgb(7, 19, 70);
+    --para-color:rgb(56, 49, 49);
+    --btn-box-shadow:rgba(50, 50, 76, 0.2) 0px 7px 29px 0px;
+    --btn-hover-bg-color:rgb(24,168,187);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 80px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #333;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
